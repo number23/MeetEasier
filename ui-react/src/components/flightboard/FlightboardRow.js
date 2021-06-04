@@ -44,7 +44,7 @@ const Time = ({ room }) => {
   return (
     <div className={room.RoomAlias + '-time meeting-time'}>
       {room.Appointments.length > 0 &&
-        new Date(parseInt(room.Appointments[0].Start, 10)).toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'}) 
+        new Date(parseInt(room.Appointments[0].Start, 10)).toLocaleTimeString([], {weekday: 'short', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'})
         + ' - ' + 
         new Date(parseInt(room.Appointments[0].End, 10)).toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})
       }
